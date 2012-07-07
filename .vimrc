@@ -25,6 +25,7 @@
   " General {
      filetype plugin indent on          " load filetype plugins and indent settings
      set autochdir                      " always switch to the current directory of the file you are editing
+     set autoread                       " set to auto read when a file is changed from the outside
      set backspace=indent,eol,start     " make backspace a little more flexible
      set backup                         " make backup files
      set backupdir=~/.vim/backup        " where to put backup files
@@ -32,6 +33,7 @@
      set directory=~/.vim/tmp           " directory to place swap files in
      set fileformats=unix,dos,mac       " support all three, in this order
      set hidden                         " you can change buffers without saving
+     set history=700                    " set how many lines of history VIM has to remember
      set iskeyword+=_,$,@,%,#           " none of these are word dividers
      set mouse=a                        " use mouse everywhere
      set noerrorbells                   " don't make noise
@@ -39,6 +41,8 @@
      set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,*.swp,*.jpg,*.gif,*.png " ignore these
      set wildmenu                       " turn on command line completion
      set wildmode=list:longest          " turn on wild menu with very large list
+     let mapleader=","                  " define <leader>
+     let g:mapleader=","                " define <leader>
      set encoding=utf8                  " to show Chinese
      set fileencoding=utf8              " to show Chinese
      set fileencodings=ucs-bom,utf8,prc " to show Chinese
@@ -127,8 +131,11 @@
   " Mappings {
       map <F12> ggVGg?
       map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+    " map <C-F12> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
       noremap <S-space> <C-b>
       noremap <space> <C-f>
+      nmap <leader>w :w!<cr>
+      nmap <leader>e :e! ~/.vimrc<cr>
    " For c-support
       map <silent> <F7>     <Esc>:cprevious<CR>
       map <silent> <F8>     <Esc>:cnext<CR>
