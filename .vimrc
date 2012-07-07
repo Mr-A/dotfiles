@@ -43,9 +43,9 @@
      set wildmode=list:longest          " turn on wild menu with very large list
      let mapleader=","                  " define <leader>
      let g:mapleader=","                " define <leader>
-     set encoding=utf8                  " to show Chinese
-     set fileencoding=utf8              " to show Chinese
-     set fileencodings=ucs-bom,utf8,prc " to show Chinese
+     set encoding=utf-8                 " to show Chinese
+     set fileencoding=utf-8             " to show Chinese
+     set fileencodings=ucs-bom,utf-8,prc " to show Chinese
   " }
  
   " Vim UI {
