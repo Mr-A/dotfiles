@@ -12,13 +12,20 @@
      " let Vundle manage Vundle
      " required!
      Bundle 'gmarik/vundle'
-
      " My Bundles here:
      "
      " original repos on github
+     Bundle 'tpope/vim-fugitive'
+     Bundle 'Lokaltog/vim-easymotion'
+     Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+     Bundle 'tpope/vim-rails.git'
+     Bundle 'ervandew/supertab'
      " vim-scripts repos
      Bundle 'The-NERD-tree'
+     Bundle 'L9'
+     Bundle 'FuzzyFinder'
      " non github repos
+     Bundle 'git://git.wincent.com/command-t.git'
      "
   " }
  
@@ -72,7 +79,14 @@
      set showmatch              " show matching brackets
      set sidescrolloff=10       " Keep 5 lines at the size
      " statusline demo: ~\myfile[+] [FORMAT=format] [TYPE=type] [ASCII=000] [HEX=00] [POS=0000,0000][00%] [LEN=000]
-     set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+     set statusline=
+     set statusline+=%F%m%r%h%w\ 
+     set statusline+=[FORMAT=%{&ff}]\ 
+     set statusline+=[TYPE=%Y]\ 
+     set statusline+=[ASCII=\%03.3b]\ 
+     set statusline+=[HEX=\%02.2B]\ 
+     set statusline+=[POS=%04l,%04v][%p%%]\ 
+     set statusline+=[LEN=%L]
   " }
  
   " Text Formatting/Layout {
